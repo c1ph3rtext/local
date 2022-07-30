@@ -1,0 +1,30 @@
+#!/bin/bash
+
+del(){
+if mv $1 ~/.trash 2>/dev/null
+then
+    echo "$1 deleted"
+else
+    echo "usage: del <FILE>"
+fi
+}
+
+ip(){
+echo "";ifconfig $1 | grep inet | awk -F" " '{print $2}' | grep -v ":";echo ""
+}
+
+recover(){
+echo "Files Listed"
+for i in $(ls .trash)
+do
+echo "[*] $i"
+done
+if [[ $1 == "" ]]
+then
+    echo "usage: recover <FILE_NAME>"
+    exit
+else
+    cp -r $HOME/.trash/$1 $HOME
+    echo "$1 HAS BEEN RECOVERED"
+fi
+}
