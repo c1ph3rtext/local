@@ -1,6 +1,16 @@
 #!/bin/bash
 
-del(){
+serv()
+{
+python -m http.server $1
+}
+ports()
+{
+echo -e "|\n\_: OPENED PORTS\n"
+netstat -plant --inet | awk '{print $5}' | sed -e "1,3d"
+}
+del()
+{
 if mv $1 ~/.trash 2>/dev/null
 then
     echo "$1 deleted"
@@ -9,11 +19,13 @@ else
 fi
 }
 
-ip(){
+ip()
+{
 echo "";ifconfig $1 | grep inet | awk -F" " '{print $2}' | grep -v ":";echo ""
 }
 
-recover(){
+recover()
+{
 echo "Files Listed"
 for i in $(ls .trash)
 do
@@ -28,3 +40,4 @@ else
     echo "$1 HAS BEEN RECOVERED"
 fi
 }
+
