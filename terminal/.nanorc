@@ -1,0 +1,17 @@
+set linenumbers
+set tabsize 4
+set titlecolor green,black
+set numbercolor blue,black
+set regexp
+set nohelp
+set multibuffer
+set tabstospaces
+
+
+bind ^Q exit main
+bind ^C copy main
+bind ^Z undo main
+bind ^Y redo main
+bind ^X cut main
+
+
