@@ -1,13 +1,12 @@
 #!/bin/bash
 
-serv()
-{
-python -m http.server $1
+up(){
+    python -m http.server $1
 }
 ports()
 {
-echo -e "|\n\_: OPENED PORTS\n"
-netstat -plant --inet | awk '{print $5}' | sed -e "1,3d"
+   echo -e "|\n\_: OPENED PORTS\n"
+   netstat -plant --inet | awk '{print $5}' | sed -e "1,3d"
 }
 del()
 {
@@ -21,23 +20,23 @@ fi
 
 ip()
 {
-echo "";ifconfig $1 | grep inet | awk -F" " '{print $2}' | grep -v ":";echo ""
+   echo "";ifconfig $1 | grep inet | awk -F" " '{print $2}' | grep -v ":";echo ""
 }
 
 recover()
 {
-echo "Files Listed"
-for i in $(ls .trash)
-do
-echo "[*] $i"
-done
-if [[ $1 == "" ]]
-then
-    echo "usage: recover <FILE_NAME>"
-    exit
-else
-    cp -r $HOME/.trash/$1 $HOME
-    echo "$1 HAS BEEN RECOVERED"
-fi
+    echo "Files Listed"
+    for i in $(ls .trash)
+    do
+       echo "[*] $i"
+    done
+    if [[ $1 == "" ]]
+    then
+        echo "usage: recover <FILE_NAME>"
+        exit
+    else
+        cp -r $HOME/.trash/$1 $HOME
+        echo "$1 HAS BEEN RECOVERED"
+    fi
 }
 
