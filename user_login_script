@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+i=0
+p="cmd"
+trap "echo ^C caught" INT
+trap "echo ^D or exit caught" exit
+while [ $i -le 4 ]
+do
+   echo -ne "[user] password for $(whoami): "
+   stty -echo
+   read g
+   stty echo
+   if [ "$g" = "$p" ]; then
+        echo -e "\n"
+        PS1='\[\e[0;92m\]\w \[\e[0;97m\]\$\[\e[0m\] '
+        break
+   else
+        echo -e "\nTry Again."
+        i=$(($i+1))
+   fi
+done
+if [ $i == 5 ];then
+   exit
+fi
+trap - INT
+trap - exit
+
