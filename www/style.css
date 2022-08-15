@@ -1,0 +1,317 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+   background-color: #1C1D22;
+   font-family: 'Noto Serif', serif;
+   /*font-family: 'Inconsolata', monospace;*/
+}
+
+.til center{
+    postion: fixed;
+    font-size: 2.9rem;
+    top: 0;
+    border: 1px inset grey;
+    background-color: #252731;
+    border-radius: 1px;
+    padding: 16px;
+    widht: 100%;
+}
+
+h4 {
+    margin-right: 600px;
+     justify-content: space-between;
+   font-size: 40px;
+}
+
+.til a {
+    text-decoration: none;
+    color: lawngreen;
+}
+
+.til a:hover {
+    text-decoration: underline;
+}
+
+#sidebar {
+     position: absolute;
+     height: 66%;
+     width: 170px;
+     background: transparent;
+     left: 0;
+     padding-top: 10px;
+}
+
+#sidebar ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.9rem;
+    line-height: 95px;
+    padding-left: 15px;
+    font-family: 'VT323', monospace;
+    border: 1px ridge transparent;
+    border-radius: 10px;
+    background: limegreen;
+    padding-right: 15px
+    
+}
+
+/*#sidebar .toggle-btn {
+	postion: absolute;
+    top: 30px;
+	left: 30px;
+    margin-top: 60px;
+    margin-left: 10px;
+}  
+
+.toggle-btn span{
+	width: 45px;
+    height: 4px;
+    background: grey;
+    display: block;
+    margin-top: 10px;
+    margin-left: 267px;
+}
+*/
+
+#sidebar ul a:hover {
+     font-size: 1.8rem;
+     background: limegreen;
+     box-shadow: 0 0 10px limegreen, 0 0 20px limegreen, 0 0 40px limegreen, 0 0 160px limegreen, 0 0 180px limegreen;
+}
+
+.x center {
+    font-size: 2.9rem;
+    top:0;
+    color: white;
+    overflow: hidden;
+    padding-top: 45px;
+    padding-bottom: 40px;
+    text-align: top;
+    color: lawngreen;
+    font-family: 'Noto Serif', serif;
+
+}
+
+p {
+    color: lawngreen;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+center {
+     font-size: 2.9rem;
+     top:0;
+     color: white;
+     overflow: hidden;
+     padding-top: 45px;
+     font-family: 'Noto Serif', serif;
+     padding-bottom: 40px;
+     text-align: top;
+}
+#___gcse_0 .gsc-control-cse {
+    background: #131313;
+    border:none;
+}
+#___gcse_0 table {
+   width: 70%;
+   padding-left: 30%;
+   height: 29px;
+}
+
+#___gcse_0 .gsc-search-button-v2 {
+    font-size: 0;
+    padding: 6px 26px;
+    padding-left: 12;
+    width: 3;
+    vertical-align: middle;
+    border: 1px solid #666;
+    border-radius: 20px;
+    border-color: #3079ed;
+    background-color: #4d90fe;
+}
+
+.gsc-input-box td input {
+    background: none;
+}
+
+.gt li {
+    margin-top: 90px;
+/*    line-height: 40px;*/
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    font-size: 30px;
+}
+
+.gt li a {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 2px ridge white;
+    font-family: 'Noto Serif', serif;
+    padding: 20px 200px;
+    border-radius: 5px;
+    padding-left: 30px;
+    
+}
+
+.gt ul li a:hover{
+     font-size: 1.5rem;
+     color: black;
+     background-color: white;
+}
+
+.osi ul a {
+    text-decoration: none;
+ /*   line-height: 90px;*/
+    color: lawngreen;
+    padding: 3px 10px;;
+    margin-left: 80px;
+    font-size: 1.9rem;
+    border: 2px ridge white;
+    padding-right: 50px;
+    border-radius: 5px;
+    background-color: #000;
+    
+}
+
+.osi li {
+    padding-top: 80px;
+}
+
+.osi a:hover {
+    background-color: limegreen;
+    color: black;
+    box-shadow: 0 0 10px limegreen, 0 0 20px limegreen, 0 0 40px limegreen, 0 0 160px limegreen, 0 0 180px limegreen;
+}
+
+.osin h1 {
+    color: silver;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.content {
+      width: 900px;
+      margin: 60px;
+      background-color: grey;
+      border: 5px ridge transparent;
+      border-radius: 35px;
+      margin-right: 49px;
+      height: 400px;
+      color:  #000;
+      text-align: center;
+      font-size: 2rem;
+      padding-right: 20px;
+
+}
+
+
+.add {
+   position: absolute;
+   top: 0;
+   margin-top: 100px;
+   margin-left: 79%;
+   border: 2px ridge #6688DC;
+   border-radius: 10px;
+   padding: 7px 8px;
+   background-color: transparent;
+}
+
+.add a {
+
+   text-decoration: none;
+   font-size: 19px;
+   color: white;
+}
+
+.add:hover {
+    font-size:18px;
+    background-color: #6688DC;
+    box-shadow: 0 0 10px #6688DC, 0 0 20px #6688DC, 0 0 40px #6688DC, 0 0 160px #6688DC, 0 0 180px #6688DC;
+    
+}
+
+.hide { 
+   display: none;
+}
+
+/*.links li {
+    margin-top: 90px;
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+}
+
+.links li a {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    border: 2px ridge white;
+    font-family: 'Noto Serif', serif;
+    padding: 20px 200px;
+    border-radius: 10px;
+    padding-left: 28px;
+    margin-right: 27px;
+    padding-right: 35px;
+    font-size: 20px;
+    padding-top: 9px;
+
+}
+*/
+.links a{
+    text-decoration: none;
+    color: lawngreen;
+}
+
+.links a:hover {
+     text-decoration: underline;
+}
+
+.links li {
+    padding: 10px 10px;
+    color: yellow;
+    font-size: 20px
+}
+
+.title {
+    padding-top: 100px;
+    border: 1px solid grey;
+    z-index: -1;
+    
+}
+
+.sh p {
+    text-align: left;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.sh .path {
+    color: cyan;
+    font-size: 20px;
+}
+
+.sh .prompt {
+    color: red;
+    font-size: 20px;
+}
+
+.sh .cmd {
+    color: yellow;
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+}
+
+.sh {
+    background-color: #3d3d3d;   
+    border: 1px solid grey;
+    margin: 100px;
+    margin-top: -35px;
+    border-radius: 30px;
+    height: 500px;
+    padding: 50px 8px;
+    overflow: hidden;
+}
+
