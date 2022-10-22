@@ -482,8 +482,6 @@ function __setprompt
 	fi
 
 	# Date
-	PS1+="\[${DARKGRAY}\](\[${CYAN}\]\$(date +%a) $(date +%b-'%-m')" # Date
-	PS1+="${BLUE} $(date +'%-I':%M:%S%P)\[${DARKGRAY}\])-" # Time
 
 	# Jobs
 	# Network Connections (for a server - comment out for non-server)
@@ -493,23 +491,11 @@ function __setprompt
 	if [ $SSH2_IP ] || [ $SSH_IP ] ; then
 		PS1+="[\[${RED}\]\u@\h"
 	else
-		PS1+="[\[${RED}\]\u"
+		PS1+="╭─\033[1;92m\u \033[2;97mat \033[1;34m\h\033[0m \033[2;97min \033[2;91m\w [$(date +%I:%M)]\033[0m\n"
 	fi
 
-	# Current directory
-	PS1+="\[${DARKGRAY}\]:\[${BROWN}\]\w\[${DARKGRAY}\]]-"
-
-	# Total size of files in current directory
-	PS1+="(\[${GREEN}\]$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')\[${DARKGRAY}\]:"
-
-	# Number of files
-	PS1+="\[${GREEN}\]\$(/bin/ls -A -1 | /usr/bin/wc -l)\[${DARKGRAY}\])"
-
-	# Skip to the next line
-	PS1+="\n"
-
 	if [[ $EUID -ne 0 ]]; then
-		PS1+="\[${GREEN}\]❯\[${NOCOLOR}\] " # Normal user
+		PS1+="\[${GREEN}\]╰─❯\[${NOCOLOR}\] " # Normal user
 	else
 		PS1+="\[${RED}\]❯\[${NOCOLOR}\] " # Root user
 	fi
@@ -525,3 +511,4 @@ function __setprompt
 }
 PROMPT_COMMAND='__setprompt'
 cd
+: undercover && export PS1='C:${PWD//\//\\\}> '
