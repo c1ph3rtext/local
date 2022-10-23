@@ -1,10 +1,6 @@
 #!/bin/bash
 iatest=$(expr index "$-" i)
 
-#######################################################
-# SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
-#######################################################
-
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	 . /etc/bashrc
@@ -29,7 +25,6 @@ if [[ $iatest > 0 ]]; then bind "set bell-style visible"; fi
 # Expand the history size
 export HISTFILESIZE=10000
 export HISTSIZE=500
-export Userdir='/mnt/c/Users/Goutham/'
 # Don't put duplicate lines in the history and do not add lines that start with a space
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 
@@ -495,7 +490,7 @@ function __setprompt
 	fi
 
 	if [[ $EUID -ne 0 ]]; then
-		PS1+="\[${GREEN}\]╰─❯\[${NOCOLOR}\] " # Normal user
+		PS1+="\[${GREEN}\]╰─$❯\[${NOCOLOR}\] " # Normal user
 	else
 		PS1+="\[${RED}\]❯\[${NOCOLOR}\] " # Root user
 	fi
