@@ -6,6 +6,10 @@ set regexp
 set nohelp
 set multibuffer
 set tabstospaces
+set brackets ""')>]}"
+set constantshow
+set boldtext
+set matchbrackets "(<[{)>]}"
 
 
 bind ^Q exit main
