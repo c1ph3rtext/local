@@ -486,7 +486,7 @@ function __setprompt
 	if [ $SSH2_IP ] || [ $SSH_IP ] ; then
 		PS1+="[\[${RED}\]\u@\h"
 	else
-		PS1+="╭─\033[1;92m\u \033[2;97mat \033[1;34m\h\033[0m \033[2;97min \033[2;91m\w [$(date +%I:%M)]\033[0m\n"
+		PS1+="╭─\033[1;92m\u \033[2;97mat \033[1;36m\h\033[0m \033[2;97min \033[2;91m\w [$(date +%I:%M)]\033[0m\n"
 	fi
 
 	if [[ $EUID -ne 0 ]]; then
