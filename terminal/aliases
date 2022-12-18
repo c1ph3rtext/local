@@ -102,3 +102,7 @@ alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' 
 alias sha1='openssl sha1'
 alias whatismyip="whatsmyip"
 alias cpu="grep 'cpu ' /proc/stat | awk '{usage=(\$2+\$4)*100/(\$2+\$4+\$5)} END {print usage}' | awk '{printf(\"%.1f\n\", \$1)}'"
+alias mkdir='mkdir -v'
+alias l='ncat -lnvp'
+alias lk='ncat -knlvp'
+alias empty='find . -empty'
